@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
-const sharp = require('sharp'); // Image resizing
+const path = require('path');
 require('dotenv').config(); // Load environment variables from .env
 
 // Initialize the bot with the token from environment variables
@@ -42,9 +42,8 @@ bot.onText(/\/start/, (msg) => {
     }
   };
 
-  // The local image path
-  const imageUrl = './nft.jpg';
-
+  // The absolute path to the image
+  const imageUrl = './resized-nft.jpg'; 
   // Custom message template as a caption for the image
   const messageTemplate = `
 What can this bot do?
@@ -53,24 +52,15 @@ Welcome to the future of gaming with S7DemoX0! This isn’t just Tic Tac Toe—i
   `;
 
   // Check if the image file exists
-  if (fs.existsSync(imageUrl)) {
-    // Resize the image using sharp
-    const resizedImagePath = './resized-nft.jpg';
-    sharp(imageUrl)
-      .resize(512, 512) // Resize the image to 512x512 pixels
-      .toFile(resizedImagePath, (err, info) => {
-        if (err) {
-          console.error('Error resizing image:', err);
-          bot.sendMessage(chatId, 'Error processing the image.');
-        } else {
-          // Send the resized image along with the caption and buttons
-          bot.sendPhoto(chatId, resizedImagePath, { caption: messageTemplate, reply_markup: options.reply_markup });
-        }
-      });
-  } else {
-    // Send an error message if the image is not found
-    bot.sendMessage(chatId, "Sorry, the image file is missing.");
-  }
+  fs.access(imageUrl, fs.constants.F_OK, (err) => {
+    if (err) {
+      // Send an error message if the image is not found
+      bot.sendMessage(chatId, "Sorry, the image file is missing.");
+    } else {
+      // Send the image along with the caption and buttons
+      bot.sendPhoto(chatId, imageUrl, { caption: messageTemplate, reply_markup: options.reply_markup });
+    }
+  });
 });
 
 // Handle button clicks (callback data)
