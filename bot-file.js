@@ -22,19 +22,19 @@ bot.onText(/\/start/, (msg) => {
         ],
         [
           { 
+            text: '💳 Game Token Store', 
+            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
+          }
+        ],
+        [
+          { 
             text: '🎮 Play Game', 
             web_app: { url: 'https://s7-tic-tac-toe.vercel.app/' } 
           }, 
         ],
         [
           { 
-            text: '💳 Cryptopay', 
-            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
-          }
-        ],
-        [
-          { 
-            text: '🛒 Phygitalx', 
+            text: '🛒 BCM Trade Cente', 
             web_app: { url: 'https://phygitalx.io/' } 
           }
         ]
@@ -48,8 +48,13 @@ bot.onText(/\/start/, (msg) => {
   const messageTemplate = `
 What can this bot do?
 
-Welcome to the future of gaming with S7DemoX0! This isn’t just Tic Tac Toe—it’s a chance to earn real rewards. Buy tokens, outplay your opponents in strategic matches, and watch your winnings grow. Every win doubles your coins, which are then converted into Jettons, a valuable digital currency. With the TON wallet, you can easily turn your Jettons into cryptocurrency. Ready to make your moves count? Click Start and begin your winning streak!
-  `;
+Welcome to the future of P2P gaming with Sector Seven! This isn’t just Tic Tac Toe—it’s a chance to earn real rewards. Buy tokens, outplay your opponents in strategic matches, and watch your winnings grow. Every win doubles your coins, which are then converted into BCM NFT’s, a valuable digital currency. Playing is simple : 
+  1. Just connect your metamask wallet.
+  2. Go to our S7 Game Token Store, and buy tokens.
+  3. Use these token to play game, and the winner gets NFT worth the 2X value of tokens.
+  4. Convert this NFT back to crypto (USDT) using our BCM Trade center
+  5. The earned rewards will directly be displayed in your metamask wallet
+Ready to make your moves count? Click Start and begin your winning streak! `;
 
   // Check if the image file exists
   fs.access(imageUrl, fs.constants.F_OK, (err) => {
