@@ -10,6 +10,8 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
+  console.log(chatId, 'chat id')
+
   // Define the options with buttons
   const options = {
     reply_markup: {
