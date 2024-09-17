@@ -19,7 +19,7 @@ bot.onText(/\/start/, (msg) => {
         [
           { 
             text: '🔗 Connect Wallet', 
-            web_app: { url: 'https://connect-wallet-omega-six.vercel.app/' } 
+            web_app: { url: 'https://connect-wallet.rajatpatel.xyz/' } 
           }, 
         ],
         [
