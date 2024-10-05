@@ -31,7 +31,8 @@ bot.onText(/\/start/, (msg) => {
         [
           { 
             text: '🎮 Play Game', 
-            web_app: { url: 'https://s7-tic-tac-toe.vercel.app/' } 
+            web_app: { url: 'https://gomuku-game.vercel.app/' } 
+            // web_app: { url: 'https://s7-tic-tac-toe.vercel.app/' } 
           }, 
         ],
         [
