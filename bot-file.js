@@ -7,7 +7,7 @@ require('dotenv').config(); // Load environment variables from .env
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 // Start command - trigger to send the message with buttons and image
-bot.onText(/\/start/, (msg) => {
+bot.onText(/\/(start|buy)/, (msg) => {
   const chatId = msg.chat.id;
 
   console.log(chatId, 'chat id')
@@ -25,7 +25,7 @@ bot.onText(/\/start/, (msg) => {
         [
           { 
             text: '🎮 Check your current token amount', 
-            web_app: { url: '#' } 
+            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
             // web_app: { url: 'https://s7-tic-tac-toe.vercel.app/' } 
           }, 
         ],
@@ -46,7 +46,7 @@ bot.onText(/\/start/, (msg) => {
   };
 
   // The absolute path to the image
-  const imageUrl = './resized-nft.jpg'; 
+  const imageUrl = './nft.jpg'; 
   // Custom message template as a caption for the image
   const messageTemplate = `
 Game Token Store BOT 🎮 🪙
