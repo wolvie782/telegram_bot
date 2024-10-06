@@ -49,12 +49,12 @@ bot.onText(/\/start/, (msg) => {
   const imageUrl = './resized-nft.jpg'; 
   // Custom message template as a caption for the image
   const messageTemplate = `
-Game Token Store BOT � �
+Game Token Store BOT 🎮 🪙
 
 Welcome to the Game Token Store BOT!
 You can easily buy game coins to join matches and win rewards.
 
-� How it works:
+💰 How it works:
 
 1. Coins: Purchase game coins with a 4% service fee.
 2. let Connect: If you haven't connected your wallet yet, please do so to proceed.
