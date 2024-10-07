@@ -7,7 +7,7 @@ require('dotenv').config(); // Load environment variables from .env
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 // Start command - trigger to send the message with buttons and image
-bot.onText(/\/(start|buy)/, (msg) => {
+bot.onText(/\/(start|exchange|gacha)/, (msg) => {
   const chatId = msg.chat.id;
 
   console.log(chatId, 'chat id')
@@ -24,7 +24,12 @@ bot.onText(/\/(start|buy)/, (msg) => {
         ],
         [
           { 
-            text: '🎮 Check your current token amount', 
+            text: '🎮 sale BCM', 
+            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
+            // web_app: { url: 'https://s7-tic-tac-toe.vercel.app/' } 
+          }, 
+          { 
+            text: '🎮 Buy BCM', 
             web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
             // web_app: { url: 'https://s7-tic-tac-toe.vercel.app/' } 
           }, 
@@ -49,18 +54,18 @@ bot.onText(/\/(start|buy)/, (msg) => {
   const imageUrl = './nft.jpg'; 
   // Custom message template as a caption for the image
   const messageTemplate = `
-Game Token Store BOT 🎮 🪙
+BCM Trade BOT 💱
+Welcome to the BCM Trade BOT!
+Here, you can easily exchange your BCM for USDT or even buy BCM through our fun Gacha feature!
 
-Welcome to the Game Token Store BOT!
-You can easily buy game coins to join matches and win rewards.
+💡 How it works:
 
-💰 How it works:
+Exchange BCM: Convert your earned BCM into USDT.
+Buy BCM via Gacha 🎰: Try your luck and purchase BCM through Gacha for extra excitement!
+Wallet Connect: If you haven't connected your wallet yet, please do so to proceed.
+Start now and enjoy your BCM rewards!
 
-1. Coins: Purchase game coins with a 4% service fee.
-2. let Connect: If you haven't connected your wallet yet, please do so to proceed.
-Get your game coins now and jump into the action!
-
-Type /buy to start your purchase! `;
+Type /exchange to begin or /gacha to try your luck!`;
 
   // Check if the image file exists
   fs.access(imageUrl, fs.constants.F_OK, (err) => {
