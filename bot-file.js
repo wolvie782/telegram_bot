@@ -25,7 +25,7 @@ bot.onText(/\/start/, (msg) => {
         [
           { 
             text: '💳 Game Token Store', 
-            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
+            web_app: { url: 'https://t.me/S7TokenStorebot' } 
           }
         ],
         [
@@ -38,7 +38,7 @@ bot.onText(/\/start/, (msg) => {
         [
           { 
             text: '🛒 BCM Trade Cente', 
-            web_app: { url: 'https://phygitalx.io/' } 
+            web_app: { url: 'https://t.me/s7BCMTradeBot' } 
           }
         ]
       ]
