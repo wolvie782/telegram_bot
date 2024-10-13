@@ -19,7 +19,7 @@ bot.onText(/\/(start|exchange|gacha)/, (msg) => {
         [
           { 
             text: '💳 Buy Game Token Now', 
-            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
+            web_app: { url: 'https://t.me/S7TokenStorebot' } 
           }
         ],
         [
