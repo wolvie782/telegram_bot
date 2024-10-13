@@ -25,7 +25,7 @@ bot.onText(/\/start/, (msg) => {
         [
           { 
             text: '💳 Game Token Store', 
-            web_app: { url: 'https://t.me/S7TokenStorebot' } 
+            url: 'https://t.me/S7TokenStorebot' 
           }
         ],
         [
@@ -38,7 +38,7 @@ bot.onText(/\/start/, (msg) => {
         [
           { 
             text: '🛒 BCM Trade Cente', 
-            web_app: { url: 'https://t.me/s7BCMTradeBot' } 
+            url: 'https://t.me/s7BCMTradeBot' 
           }
         ]
       ]
