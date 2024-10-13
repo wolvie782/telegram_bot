@@ -19,7 +19,7 @@ bot.onText(/\/(start|exchange|gacha)/, (msg) => {
         [
           { 
             text: '💳 Buy Game Token Now', 
-            web_app: { url: 'https://t.me/S7TokenStorebot' } 
+            url:  'https://t.me/S7TokenStorebot' 
           }
         ],
         [
