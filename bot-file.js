@@ -19,13 +19,13 @@ bot.onText(/\/(start|buy)/, (msg) => {
         [
           { 
             text: '💳 Buy Game Token Now', 
-            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
+            web_app: { url: 'https://cryptpay-frontend-phi.vercel.app/' } 
           }
         ],
         [
           { 
             text: '🎮 Check your current token amount', 
-            web_app: { url: 'https://deposit.bacoor-test001.xyz/S7?uid=3&username=DemoUser' } 
+            web_app: { url: 'https://cryptpay-frontend-phi.vercel.app/' } 
             // web_app: { url: 'https://s7-tic-tac-toe.vercel.app/' } 
           }, 
         ],
